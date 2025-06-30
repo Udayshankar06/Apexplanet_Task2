@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyTaskBoard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>MyTaskBoard</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#tasks">To-Do List</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="section home">
+    <h2>Welcome to MyTaskBoard</h2>
+    <p>Manage your daily tasks and image collection efficiently with our responsive and interactive web app.</p>
+    <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe" alt="Welcome" class="section-image">
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="subject" placeholder="Subject">
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section id="tasks" class="section tasks">
+    <h2>Your To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="clearTasks()">Clear All</button>
+    <ul id="taskList"></ul>
+  </section>
+
+  <section id="gallery" class="section gallery">
+    <h2>Image Gallery</h2>
+    <input type="text" id="imageURL" placeholder="Enter Image URL">
+    <button onclick="addImage()">Add Image</button>
+    <div class="image-container" id="imageContainer">
+      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Sample 1">
+      <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5" alt="Sample 2">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyTaskBoard. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
